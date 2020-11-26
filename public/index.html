@@ -1,0 +1,76 @@
+<!DOCTYPE html  >
+
+<html ng-app="homeApp">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <title>Contact List App</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+    <script src="/Controllers/controller.js"></script>
+    <script src="/Controllers/loginController.js"></script>
+    <script src="/Controllers/employees.js"></script>
+    <script src="/Controllers/employeesD.js"></script>
+    <style>
+        .center-screen {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            min-height: 100vh;
+        }
+    </style>
+
+</head>
+
+<body onload=' location.href="#!home" '>
+
+    <div class="container">
+        <header style="text-align: center;">
+            <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#!home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#!employees">EmployeeList</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+
+    </div>
+
+
+    <div ng-view class="container p-3 my-3 border">
+
+
+    </div>
+    <div class="container">
+        <footer style="text-align: center;">@Copyright 2020</footer>
+
+    </div>
+
+
+
+</body>
+
+</html>

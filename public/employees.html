@@ -1,0 +1,42 @@
+<div class="card" ng-controller="empCtrl">
+
+    <h2>List of Current Employees</h2>
+    <h4>Login:{{userdetails}}</h4>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Employee_ID</th>
+                <th>Employee Name</th>
+                <th>Birth Date</th>
+                <th ng-model='size'>
+                    <p font-scale='size'>AGE</p>
+                </th>
+                <th>Action</th>
+                <th>&nbsp;</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><input class="form-control" ng-model="contact.empid" required></td>
+                <td><input class="form-control" ng-model="contact.empname" required></td>
+                <td><input class="form-control" ng-model="contact.empbdate" required></td>
+                <td><input class="form-control" ng-model='' required></td>
+
+                <td><button class="btn btn-primary" ng-click="addContact()">Add Emp</button></td>
+                <td><button class="btn btn-info" ng-click="update()">Update</button>&nbsp;&nbsp;<button class="btn btn-info" ng-click="deselect()">Clear</button></td>
+
+            </tr>
+            <tr ng-repeat="contact in contactlist">
+                <td>{{contact.empid}}</td>
+                <td>{{contact.empname}}</td>
+                <td>{{contact.empbdate}}</td>
+                <td>{{}}</td>
+
+                <td><button class="btn btn-danger" ng-click="remove(contact._id)">Remove</button></td>
+                <td><button class="btn btn-warning" ng-click="edit(contact._id)">Edit</button></td>
+
+            </tr>
+        </tbody>
+    </table>
+</div>
